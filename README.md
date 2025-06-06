@@ -1,25 +1,36 @@
 # AI-Powered Blog Generator with Daily Automation
 
-This Python/Flask application generates SEO-optimized blog posts using AI technology. Given any keyword, it performs SEO research and creates structured blog drafts with affiliate link placeholders. The system automatically generates new content daily using a built-in scheduler.
+A Python/Flask application that transforms keywords into SEO-optimized blog posts. Automates content creation with daily publishing - perfect for affiliate marketers and content creators.
 
-## Features
-- **SEO Research**: Fetches search volume, keyword difficulty, and CPC data
-- **AI Content Generation**: Creates structured blog posts with OpenAI
-- **Daily Automation**: Generates new posts automatically at 8:00 AM UTC
-- **Affiliate Ready**: Includes {{AFF_LINK}} placeholders for monetization
-- **Error Resilient**: Falls back to mock content when API limits are exceeded
+## ✨ Features
+- **SEO Research**: Fetches keyword metrics (search volume, difficulty, CPC)
+- **AI Content Generation**: Creates structured blog drafts with OpenAI
+- **Daily Automation**: Publishes new posts automatically at 8 AM daily
+- **Affiliate-Ready**: Includes {{AFF_LINK}} placeholders for monetization
+- **Error Resilient**: Falls back to mock content when API limits are hit
 
-## Technologies Used
-- Python 3.11
-- Flask (REST API)
-- OpenAI API
-- APScheduler (automation)
-- JSON (data storage)
+## 🛠️ Technologies Used
+- **Backend**: Python 3.11, Flask
+- **AI**: OpenAI GPT-3.5/GPT-4
+- **Scheduling**: APScheduler
+- **Data Handling**: JSON
+- **Environment**: Python-dotenv
 
-## Setup Instructions
-
-### 1. Clone Repository
+### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/ai-blog-generator-interview-<YourName>.git
-cd ai-blog-generator-interview-<YourName>
+git clone https://github.com/AliAlamrani/ai-blog-generator.git
+cd ai-blog-generator-interview-AliAlamrani
 
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate    # Windows
+
+pip install -r requirements.txt
+
+## put this in the .env file
+OPENAI_API_KEY="your-api-key-here" 
+
+python app.py
+
+Visit this URL in your browser:
+http://localhost:5000/generate?keyword=your-topic
