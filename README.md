@@ -16,7 +16,7 @@ A Python/Flask application that transforms keywords into SEO-optimized blog post
 - **Data Handling**: JSON
 - **Environment**: Python-dotenv
 
-### 1. Clone the repository
+##  Clone the repository
 ```bash
 git clone https://github.com/AliAlamrani/ai-blog-generator.git
 cd ai-blog-generator-interview-AliAlamrani
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ## put this in the .env file
 OPENAI_API_KEY="your-api-key-here" 
 
-python app.py
+## python app.py
 
-Visit this URL in your browser:
+## Visit this URL in your browser:
 http://localhost:5000/generate?keyword=your-topic
